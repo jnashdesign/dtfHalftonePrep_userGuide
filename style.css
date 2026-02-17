@@ -1,0 +1,454 @@
+/* ── Reset & Base ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Adobe Clean", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2c2c2c;
+  background: #f7f7f8;
+}
+
+/* ── Hero Header ──────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #1b1b1b 0%, #2d2d2d 100%);
+  color: #fff;
+  padding: 60px 40px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+.hero p {
+  font-size: 17px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.downloadLink {
+  text-decoration: none;
+  color: #fff;
+  margin: 20px 0;
+  display: inline-block;
+  padding: 10px 40px;
+  background: #444;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.demo-link {
+  background: transparent;
+  color: #333;
+  border: 2px solid #888;
+  transition: border-color 0.2s, color 0.2s;
+}
+.demo-link:hover {
+  border-color: #fff;
+}
+
+/* ── Table of Contents ────────────────────────────── */
+.toc {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px 32px;
+  margin-bottom: 32px;
+}
+.toc h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 12px;
+}
+.toc ul {
+  list-style: none;
+  columns: 2;
+  gap: 8px;
+}
+.toc li {
+  margin-bottom: 6px;
+}
+
+.toc a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.toc a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* ── Container ────────────────────────────────────── */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+
+/* ── Section Cards ────────────────────────────────── */
+.section {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+.section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1b1b1b;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+.section h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1b1b1b;
+  margin: 24px 0 12px;
+}
+.section h3:first-of-type {
+  margin-top: 0;
+}
+.section p {
+  margin-bottom: 12px;
+}
+
+/* ── Ordered & Unordered Lists ────────────────────── */
+.section ol, .section ul {
+  margin: 0 0 16px 24px;
+}
+.section li {
+  margin-bottom: 8px;
+}
+.section li ol, .section li ul {
+  margin-top: 8px;
+}
+
+/* ── Inline Code ──────────────────────────────────── */
+code {
+  background: #f0f0f2;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 14px;
+  color: #c7254e;
+}
+
+/* ── Numbered Steps ───────────────────────────────── */
+.steps {
+  counter-reset: step-counter;
+  list-style: none;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+.steps li {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 48px;
+  margin-bottom: 16px;
+  min-height: 36px;
+  display: flex;
+  align-items: flex-start;
+}
+.steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background: #1b1b1b;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.steps li span {
+  padding-top: 5px;
+}
+
+/* ── Section Two-Column Layout ────────────────────── */
+.section-split {
+  display: flex;
+  gap: 24px;
+  margin: 12px 0 20px;
+}
+.section-split .section-thumb {
+  flex-shrink: 0;
+  width: 300px;
+}
+.section-split .section-thumb img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.section-split .section-desc {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Screenshot Placeholders ──────────────────────── */
+.screenshot {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  padding: 20px;
+  margin: 16px 0;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+.screenshot img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.screenshot .caption {
+  margin-top: 8px;
+  font-style: italic;
+  color: #999;
+  font-size: 13px;
+}
+
+/* ── Callout / Note Boxes ─────────────────────────── */
+.callout {
+  background: #fff8e6;
+  border-left: 4px solid #f5a623;
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+.callout strong {
+  color: #c47d00;
+}
+.callout.info {
+  background: #e8f4fd;
+  border-left-color: #0066cc;
+}
+.callout.info strong {
+  color: #004499;
+}
+
+/* ── Platform Tabs ────────────────────────────────── */
+.platform-block {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+.platform-block .platform-label {
+  background: #f0f0f2;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid #e0e0e0;
+}
+.platform-block .platform-content {
+  padding: 16px;
+}
+.platform-block .platform-content ol {
+  margin-left: 20px;
+}
+
+/* ── Tables ───────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+}
+table th {
+  background: #f5f5f7;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  padding: 10px 16px;
+  border-bottom: 2px solid #ddd;
+}
+table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  width: 160px;
+}
+table tr:last-child td {
+  border-bottom: none;
+}
+table tr:hover td {
+  background: #fafafa;
+}
+
+/* ── FAQ Accordions ───────────────────────────────── */
+details {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+details:hover {
+  border-color: #ccc;
+}
+details summary {
+  background: #f1f1f1;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 15px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: "▸";
+  font-size: 24px;
+  color: #888;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+details[open] summary {
+  border-bottom: 1px solid #eee;
+}
+details p {
+  padding: 16px 18px;
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── Tip Cards ────────────────────────────────────── */
+.tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+.tip-card {
+  background: #f9f9fb;
+  border: 1px solid #e8e8ec;
+  border-radius: 8px;
+  padding: 16px;
+}
+.tip-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #1b1b1b;
+  font-size: 14px;
+}
+.tip-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ── Requirements Badge Row ───────────────────────── */
+.badge-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f0f2;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* ── Video Modal ──────────────────────────────────── */
+.video-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+.video-modal-overlay.active {
+  display: flex;
+}
+.video-modal {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+}
+.video-modal video {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  background: #000;
+}
+.video-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background: #000;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 5px 10px;
+  transition: color 0.2s;
+  border-radius: 5px;
+  z-index: 10000;
+}
+.video-modal-close:hover {
+  color: #ccc;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 600px) {
+  .hero { padding: 40px 20px; }
+  .hero h1 { font-size: 24px; }
+  .container { padding: 20px 16px 60px; }
+  .section { padding: 20px; }
+  .toc ul { columns: 1; }
+  .tip-grid { grid-template-columns: 1fr; }
+  .section-split { flex-direction: column; }
+  .section-split .section-thumb { width: 100%; }
+  .demo-link { margin-top: -10px;}
+}

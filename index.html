@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DTF Halftone Prep — Download & User Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <img src="images/dtfHalftonePrepBanner.svg" alt="DTF Halftone Prep" style="width:100%;max-width:600px;height:auto;">
+    <p>A Photoshop plugin that makes it easy to create halftone patterns for DTF (Direct to Film) printing. No manual filter stacking required — just pick your settings and go.</p>
+  </div>
+
+  <div class="container">
+
+    <div class="hero-actions">
+      <a target="_blank" class="downloadLink" href="../dtfHalftonePrep_PS_plugin.zip">Download DTF Halftone Prep Plugin</a>
+      <a href="#" class="downloadLink demo-link" id="openDemoBtn">Watch Demo</a>
+    </div>
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <h3>Contents</h3>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#quick-start">Quick Start</a></li>
+        <li><a href="#sections-explained">Sections Explained</a></li>
+        <li><a href="#tips">Tips for Best Results</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </nav>
+
+        <!-- ─── Requirements ─────────────────────────────── -->
+        <div class="section" id="requirements">
+          <h2>Requirements</h2>
+          <div class="badge-row">
+            <span class="badge">Adobe Photoshop 23.3+</span>
+            <span class="badge">macOS or Windows</span>
+            <span class="badge">Creative Cloud Desktop</span>
+          </div>
+        </div>    
+
+    <!-- ─── Installation ─────────────────────────────── -->
+    <div class="section" id="installation">
+      <h2>Installation</h2>
+
+      <h3>Easiest method (all versions)</h3>
+
+      <ol class="steps">
+        <li><span>Make sure the <strong>Creative Cloud Desktop</strong> app is running.</span></li>
+        <li><span><strong>Double-click</strong> the <code>.ccx</code> file you received.</span></li>
+        <li>
+          <span>Creative Cloud will open and show a confirmation dialog. Click <strong>Install</strong> to continue.</span>
+        </li>
+        <li><span>Open (or restart) Photoshop.</span></li>
+        <li><span>Go to <strong>Plugins &gt; DTF Halftone Prep &gt; DTF Halftone Prep</strong> to open the panel.</span></li>
+      </ol>
+
+      <div class="screenshot">
+        <img src="images/plugins-menu.png" alt="Photoshop Plugins menu showing DTF Halftone Prep" />
+        <div class="caption">The plugin appears under Plugins &gt; DTF Halftone Prep in the Photoshop menu bar.</div>
+      </div>
+
+      <div class="callout info">
+        <strong>Note:</strong> When installing a <code>.ccx</code> file, Creative Cloud may show a warning that the plugin doesn't come from the Creative Cloud Marketplace. This is normal — click <strong>Install</strong> to proceed.
+      </div>
+
+      <h3>If double-clicking doesn't work</h3>
+
+      <div class="platform-block">
+        <div class="platform-label">macOS</div>
+        <div class="platform-content">
+          <ol>
+            <li>Right-click the <code>.ccx</code> file and choose <strong>Open With &gt; UnifiedPluginInstallerAgent</strong>.</li>
+            <li>If you see a macOS security warning, go to <strong>System Settings &gt; Privacy &amp; Security</strong> and click <strong>Open Anyway</strong>.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="platform-block">
+        <div class="platform-label">Windows</div>
+        <div class="platform-content">
+          <ol>
+            <li>Make sure the <code>.ccx</code> file is on the same drive as Photoshop (e.g. your Desktop or Downloads folder).</li>
+            <li>Try double-clicking again. If it still doesn't work:
+              <ol>
+                <li>Use <strong>WinRAR</strong> or <strong>7-Zip</strong> to extract the <code>.ccx</code> file (it's a zip archive).</li>
+                <li>Copy the extracted folder into your Photoshop install directory:<br>
+                  <code>C:\Program Files\Adobe\Adobe Photoshop [Version]\Plug-ins\</code></li>
+                <li>Restart Photoshop.</li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <h3>After installation</h3>
+      <p>The plugin panel will appear on the right side of your workspace. You can dock it, float it, or resize it however you like.</p>
+
+      <div class="callout">
+        <strong>Still not showing up?</strong> Try signing out of Creative Cloud, restarting your computer, signing back in, then reopening Photoshop.
+      </div>
+
+      <div class="callout info">
+        <strong>Tip:</strong> Dock the panel where you want it, then go to <strong>Window &gt; Workspace &gt; New Workspace</strong> to save your layout. Photoshop will remember the position for future sessions.
+      </div>
+    </div>
+
+    <!-- ─── Quick Start ──────────────────────────────── -->
+    <div class="section" id="quick-start">
+      <h2>Quick Start</h2>
+
+      <ol class="steps">
+        <li><span>Open an image in Photoshop.</span></li>
+        <li><span>In the plugin, pick the <strong>Source Layer</strong> you want to apply the halftone to.</span></li>
+        <li><span>Set your <strong>Base Color</strong> to match the garment or substrate you're printing on.</span></li>
+        <li><span>Adjust the <strong>Halftone Settings</strong> and <strong>Levels</strong> to taste.</span></li>
+        <li><span>Click <strong>Create Halftone</strong> to preview the result.</span></li>
+        <li><span>When you're happy, click <strong>Apply Halftone as Mask</strong> to apply it to your original image.</span></li>
+        <li><span>Use the <strong>Export</strong> section to save a print-ready transparent PNG.</span></li>
+      </ol>
+    </div>
+
+    <!-- ─── Sections Explained ───────────────────────── -->
+    <div class="section" id="sections-explained">
+      <h2>Sections Explained</h2>
+
+      <h3>Source Layer</h3>
+      <div class="section-split">
+        <div class="section-thumb">
+          <img src="images/dtf_halftone_prep_sourceLayer.jpg" alt="Source Layer section" />
+        </div>
+        <div class="section-desc">
+          <p>Choose which layer in your document should receive the halftone effect. If your file has multiple layers, use the dropdown to select the one with your artwork. Click <strong>Refresh Layers</strong> if you've added or renamed layers since opening the plugin.</p>
+          <div class="callout info">
+            <strong>Locked layers:</strong> If the source layer is locked, the plugin will automatically unlock it for you and let you know with a notification.
+          </div>
+        </div>
+      </div>
+
+      <h3>Base Color</h3>
+      <div class="section-split">
+        <div class="section-thumb">
+          <img src="images/dtf_halftone_prep_baseColor.jpg" alt="Base Color section" />
+        </div>
+        <div class="section-desc">
+          <p>Set the color of the shirt or substrate you're printing on. This creates a "Base Color" layer behind your artwork so you can preview how the halftone will look on the final product. The default is black (<code>#000000</code>).</p>
+          <ul>
+            <li><strong>Hex input</strong> — Type a hex color code (e.g. <code>#000000</code> for black, <code>#FFFFFF</code> for white) and click <strong>Set Base Color</strong>.</li>
+            <li><strong>Eyedropper</strong> (dropper icon) — Click the eyedropper button, then click anywhere on the canvas to sample a color.</li>
+            <li><strong>Color swatch</strong> (colored square) — Click the square to open a color picker where you can visually choose a color from the spectrum.</li>
+            <li><strong>Show shirt color preview</strong> — Toggle this on/off to show or hide the base color layer behind your artwork.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Halftone Settings</h3>
+      <div class="section-split">
+        <div class="section-thumb">
+          <img src="images/dtf_halftone_prep_halftoneSettings.jpg" alt="Halftone Settings section" />
+        </div>
+        <div class="section-desc">
+          <table>
+            <tr>
+              <th>Setting</th>
+              <th>What it does</th>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td><strong>Dot</strong> creates circular halftone dots. <strong>Line</strong> creates parallel line patterns.</td>
+            </tr>
+            <tr>
+              <td>Dot / Line Size</td>
+              <td>Controls how large the dots or lines are. Larger values = bigger pattern elements.</td>
+            </tr>
+            <tr>
+              <td>Angle</td>
+              <td>Rotates the halftone pattern (0&deg; to 90&deg;).</td>
+            </tr>
+            <tr>
+              <td>Threshold</td>
+              <td>Controls the cutoff between black and white. Lower values = more white. Higher values = more black. Most useful for the Line type.</td>
+            </tr>
+            <tr>
+              <td>Invert Halftone</td>
+              <td>Swaps the black and white in the halftone pattern. Use this when printing on dark shirts — the dots represent where ink IS applied instead of where it ISN'T.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <h3>Levels</h3>
+      <div class="section-split">
+        <div class="section-thumb">
+          <img src="images/dtf_halftone_prep_levels.jpg" alt="Levels section" />
+        </div>
+        <div class="section-desc">
+          <p>Fine-tune the tonal range of your image before the halftone is applied. These work just like Photoshop's <strong>Image &gt; Adjustments &gt; Levels</strong> dialog.</p>
+          <table>
+            <tr>
+              <th>Slider</th>
+              <th>What it does</th>
+            </tr>
+            <tr>
+              <td>Shadows</td>
+              <td>Sets the black point (0–253). Slide right to crush darker tones to pure black. Default: 0.</td>
+            </tr>
+            <tr>
+              <td>Midtones</td>
+              <td>Adjusts the gamma / midpoint. Slide left to darken the midtones, right to brighten them. Default: 1.00 (no change).</td>
+            </tr>
+            <tr>
+              <td>Highlights</td>
+              <td>Sets the white point (2–255). Slide left to push brighter tones to pure white. Default: 255.</td>
+            </tr>
+          </table>
+          <div class="callout info">
+            <strong>Tip:</strong> Levels give you much more control over contrast than a single slider. Try pulling the Shadows up and Highlights down to increase contrast before halftoning — this often produces cleaner, more defined patterns.
+          </div>
+        </div>
+      </div>
+
+      <h3>Preview &amp; Mask</h3>
+      <div class="section-split">
+        <div class="section-thumb">
+          <img src="images/dtf_halftone_prep_preview_mask.jpg" alt="Preview & Mask section" />
+        </div>
+        <div class="section-desc">
+          <ul>
+            <li><strong>Live Preview</strong> — When enabled, the halftone updates automatically as you change settings. Turn this off if your computer feels slow while adjusting sliders.</li>
+            <li><strong>Create Halftone</strong> — Generates a halftone preview layer. After the first click, the button changes to <strong>Update Halftone</strong> so you can re-apply after tweaking settings.</li>
+            <li><strong>Apply Halftone as Mask</strong> — Applies the halftone pattern as a layer mask on your original image. This is your "commit" step — the halftone controls which parts of your artwork are visible. The preview layer is hidden automatically.</li>
+            <li><strong>Reset to Defaults</strong> — Resets all sliders and settings back to their defaults and removes any halftone preview layers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Export</h3>
+      <div class="section-split">
+        <div class="section-thumb">
+          <img src="images/dtf_halftone_prep_export.jpg" alt="Export section" />
+        </div>
+        <div class="section-desc">
+          <p>Save your finished artwork as a transparent PNG ready for DTF printing.</p>
+          <ul>
+            <li><strong>Size mode</strong> — Choose between <strong>Inches + DPI</strong> or <strong>Pixels</strong> to set the export dimensions.</li>
+            <li>The width, height, and DPI default to your document's current size. You can change them manually if needed.</li>
+            <li>Click <strong>Export PNG (Transparent)</strong> to save the file. You'll be prompted to choose where to save it.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Tips ─────────────────────────────────────── -->
+    <div class="section" id="tips">
+      <h2>Tips for Best Results</h2>
+      <div class="tip-grid">
+        <div class="tip-card">
+          <strong>Dark shirts</strong>
+          <p>Check "Invert Halftone" so the dots represent where ink is printed. White ink goes down first, then the halftone pattern is printed on top.</p>
+        </div>
+        <div class="tip-card">
+          <strong>Light shirts</strong>
+          <p>Leave "Invert Halftone" off. The dots represent transparent areas where the shirt color shows through.</p>
+        </div>
+        <div class="tip-card">
+          <strong>Dot size matters</strong>
+          <p>For high-resolution images (above 2000px), the default dot size is 24. For smaller images, it's 8. Larger dots are bolder, smaller dots are more detailed.</p>
+        </div>
+        <div class="tip-card">
+          <strong>Line angle</strong>
+          <p>A 45&deg; angle is the standard for halftones. 0&deg; gives horizontal lines, 90&deg; gives vertical lines.</p>
+        </div>
+        <div class="tip-card">
+          <strong>No half-pixels</strong>
+          <p>The plugin automatically ensures every pixel is either fully opaque or fully transparent — no soft edges that could cause printing issues.</p>
+        </div>
+        <div class="tip-card">
+          <strong>Use Levels for contrast</strong>
+          <p>Instead of a simple contrast slider, use the Levels section to fine-tune shadows, midtones, and highlights — just like you would in Photoshop's Levels dialog.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── FAQs ─────────────────────────────────────── -->
+    <div class="section" id="faqs">
+      <h2>FAQs</h2>
+      <details>
+        <summary><strong>The plugin says it unlocked my layer — is that OK?</strong></summary>
+        <p>Yes. If your source layer is locked (like the default "Background" layer), the plugin will automatically unlock it so it can apply the halftone. You'll see a notification letting you know. This is safe and you can re-lock the layer afterward if needed.</p>
+      </details>
+      <details>
+        <summary><strong>Why is the layer list empty or outdated?</strong></summary>
+        <p>Click <strong>Refresh Layers</strong> in the Source Layer section. The list also updates automatically when you add or remove layers, but a manual refresh can help.</p>
+      </details>
+      <details>
+        <summary><strong>Why does the halftone preview look wrong after editing?</strong></summary>
+        <p>Click <strong>Update Halftone</strong> to regenerate with your current settings. The preview doesn't auto-update when you edit the source image outside the plugin.</p>
+      </details>
+      <details>
+        <summary><strong>Why is the plugin panel cut off?</strong></summary>
+        <p>The panel is scrollable — scroll down to see all sections. You can also resize the panel by dragging its edges.</p>
+      </details>
+      <details>
+        <summary><strong>Why does the eyedropper button time out?</strong></summary>
+        <p>You have 15 seconds to click a color on the canvas after pressing the eyedropper button. Try again if it times out.</p>
+      </details>
+      <details>
+        <summary><strong>Can I undo the halftone mask?</strong></summary>
+        <p>Yes. Use <strong>Edit &gt; Undo</strong> (Cmd/Ctrl+Z) in Photoshop immediately after applying. You can also click <strong>Reset to Defaults</strong> in the plugin to remove all halftone layers.</p>
+      </details>
+      <details>
+        <summary><strong>What are the Levels sliders for?</strong></summary>
+        <p>They work just like Photoshop's Levels adjustment (Image &gt; Adjustments &gt; Levels). Shadows controls the black point, Midtones adjusts the gamma, and Highlights controls the white point. Use them to fine-tune the tonal range before the halftone is applied for cleaner results.</p>
+      </details>
+    </div>
+
+  </div>
+
+  <!-- Video Modal -->
+  <div class="video-modal-overlay" id="videoModal">
+    <div class="video-modal">
+      <button class="video-modal-close" id="closeModalBtn">&times;</button>
+      <video id="demoVideo" controls>
+        <source src="./assets/demo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var modal = document.getElementById('videoModal');
+      var video = document.getElementById('demoVideo');
+      var openBtn = document.getElementById('openDemoBtn');
+      var closeBtn = document.getElementById('closeModalBtn');
+
+      function openModal(e) {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.remove('active');
+        video.pause();
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>
