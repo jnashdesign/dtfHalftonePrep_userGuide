@@ -12,7 +12,7 @@
   <!-- Hero -->
   <div class="hero">
     <img src="images/dtfHalftonePrepBanner.svg" alt="DTF Halftone Prep" style="width:100%;max-width:600px;height:auto;">
-    <p>A Photoshop plugin that makes it easy to create halftone patterns for DTF (Direct to Film) printing. No manual filter stacking required — just pick your settings and go.</p>
+    <p>A Photoshop plugin for creating halftone patterns for DTF printing and vinyl-ready color separations for cutting machines. Two tools in one panel — switch between them using the Halftone and Vinyl tabs.</p>
   </div>
 
   <div class="container">
@@ -27,9 +27,9 @@
       <ul>
         <li><a href="#requirements">Requirements</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#quick-start">Quick Start</a></li>
-        <li><a href="#sections-explained">Sections Explained</a></li>
-        <li><a href="#tips">Tips for Best Results</a></li>
+        <li><a href="#source-layer">Source Layer</a></li>
+        <li><a href="#halftone-tab">Halftone Tab</a></li>
+        <li><a href="#vinyl-tab">Vinyl Prep Tab</a></li>
         <li><a href="#faqs">FAQs</a></li>
       </ul>
     </nav>
@@ -110,200 +110,348 @@
       </div>
     </div>
 
-    <!-- ─── Quick Start ──────────────────────────────── -->
-    <div class="section" id="quick-start">
-      <h2>Quick Start</h2>
-
-      <ol class="steps">
-        <li><span>Open an image in Photoshop.</span></li>
-        <li><span>In the plugin, pick the <strong>Source Layer</strong> you want to apply the halftone to.</span></li>
-        <li><span>Set your <strong>Base Color</strong> to match the garment or substrate you're printing on.</span></li>
-        <li><span>Adjust the <strong>Halftone Settings</strong> and <strong>Levels</strong> to taste.</span></li>
-        <li><span>Click <strong>Create Halftone</strong> to preview the result.</span></li>
-        <li><span>When you're happy, click <strong>Apply Halftone as Mask</strong> to apply it to your original image.</span></li>
-        <li><span>Use the <strong>Export</strong> section to save a print-ready transparent PNG.</span></li>
-      </ol>
-    </div>
-
-    <!-- ─── Sections Explained ───────────────────────── -->
-    <div class="section" id="sections-explained">
-      <h2>Sections Explained</h2>
-
-      <h3>Source Layer</h3>
+    <!-- ─── Source Layer (shared) ────────────────────── -->
+    <div class="section" id="source-layer">
+      <h2>Source Layer</h2>
       <div class="section-split">
         <div class="section-thumb">
           <img src="images/dtf_halftone_prep_sourceLayer.jpg" alt="Source Layer section" />
         </div>
         <div class="section-desc">
-          <p>Choose which layer in your document should receive the halftone effect. If your file has multiple layers, use the dropdown to select the one with your artwork. Click <strong>Refresh Layers</strong> if you've added or renamed layers since opening the plugin.</p>
+          <p>Both the <strong>Halftone</strong> and <strong>Vinyl</strong> tabs share the same Source Layer selector at the top of the plugin. Choose which layer in your document the effect should be applied to. If your file has multiple layers, use the dropdown to select the one with your artwork. Click the <strong>Refresh</strong> button if you've added or renamed layers since opening the plugin.</p>
           <div class="callout info">
-            <strong>Locked layers:</strong> If the source layer is locked, the plugin will automatically unlock it for you and let you know with a notification.
+            <strong>Locked layers:</strong> If the source layer is locked (like the default "Background" layer), the plugin will automatically unlock it for you and let you know with a notification.
           </div>
-        </div>
-      </div>
-
-      <h3>Base Color</h3>
-      <div class="section-split">
-        <div class="section-thumb">
-          <img src="images/dtf_halftone_prep_baseColor.jpg" alt="Base Color section" />
-        </div>
-        <div class="section-desc">
-          <p>Set the color of the shirt or substrate you're printing on. This creates a "Base Color" layer behind your artwork so you can preview how the halftone will look on the final product. The default is black (<code>#000000</code>).</p>
-          <ul>
-            <li><strong>Hex input</strong> — Type a hex color code (e.g. <code>#000000</code> for black, <code>#FFFFFF</code> for white) and click <strong>Set Base Color</strong>.</li>
-            <li><strong>Eyedropper</strong> (dropper icon) — Click the eyedropper button, then click anywhere on the canvas to sample a color.</li>
-            <li><strong>Color swatch</strong> (colored square) — Click the square to open a color picker where you can visually choose a color from the spectrum.</li>
-            <li><strong>Show shirt color preview</strong> — Toggle this on/off to show or hide the base color layer behind your artwork.</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Halftone Settings</h3>
-      <div class="section-split">
-        <div class="section-thumb">
-          <img src="images/dtf_halftone_prep_halftoneSettings.jpg" alt="Halftone Settings section" />
-        </div>
-        <div class="section-desc">
-          <table>
-            <tr>
-              <th>Setting</th>
-              <th>What it does</th>
-            </tr>
-            <tr>
-              <td>Type</td>
-              <td><strong>Dot</strong> creates circular halftone dots. <strong>Line</strong> creates parallel line patterns.</td>
-            </tr>
-            <tr>
-              <td>Dot / Line Size</td>
-              <td>Controls how large the dots or lines are. Larger values = bigger pattern elements.</td>
-            </tr>
-            <tr>
-              <td>Angle</td>
-              <td>Rotates the halftone pattern (0&deg; to 90&deg;).</td>
-            </tr>
-            <tr>
-              <td>Threshold</td>
-              <td>Controls the cutoff between black and white. Lower values = more white. Higher values = more black. Most useful for the Line type.</td>
-            </tr>
-            <tr>
-              <td>Invert Halftone</td>
-              <td>Swaps the black and white in the halftone pattern. Use this when printing on dark shirts — the dots represent where ink IS applied instead of where it ISN'T.</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-
-      <h3>Levels</h3>
-      <div class="section-split">
-        <div class="section-thumb">
-          <img src="images/dtf_halftone_prep_levels.jpg" alt="Levels section" />
-        </div>
-        <div class="section-desc">
-          <p>Fine-tune the tonal range of your image before the halftone is applied. These work just like Photoshop's <strong>Image &gt; Adjustments &gt; Levels</strong> dialog.</p>
-          <table>
-            <tr>
-              <th>Slider</th>
-              <th>What it does</th>
-            </tr>
-            <tr>
-              <td>Shadows</td>
-              <td>Sets the black point (0–253). Slide right to crush darker tones to pure black. Default: 0.</td>
-            </tr>
-            <tr>
-              <td>Midtones</td>
-              <td>Adjusts the gamma / midpoint. Slide left to darken the midtones, right to brighten them. Default: 1.00 (no change).</td>
-            </tr>
-            <tr>
-              <td>Highlights</td>
-              <td>Sets the white point (2–255). Slide left to push brighter tones to pure white. Default: 255.</td>
-            </tr>
-          </table>
-          <div class="callout info">
-            <strong>Tip:</strong> Levels give you much more control over contrast than a single slider. Try pulling the Shadows up and Highlights down to increase contrast before halftoning — this often produces cleaner, more defined patterns.
-          </div>
-        </div>
-      </div>
-
-      <h3>Preview &amp; Mask</h3>
-      <div class="section-split">
-        <div class="section-thumb">
-          <img src="images/dtf_halftone_prep_preview_mask.jpg" alt="Preview & Mask section" />
-        </div>
-        <div class="section-desc">
-          <ul>
-            <li><strong>Live Preview</strong> — When enabled, the halftone updates automatically as you change settings. Turn this off if your computer feels slow while adjusting sliders.</li>
-            <li><strong>Create Halftone</strong> — Generates a halftone preview layer. After the first click, the button changes to <strong>Update Halftone</strong> so you can re-apply after tweaking settings.</li>
-            <li><strong>Apply Halftone as Mask</strong> — Applies the halftone pattern as a layer mask on your original image. This is your "commit" step — the halftone controls which parts of your artwork are visible. The preview layer is hidden automatically.</li>
-            <li><strong>Reset to Defaults</strong> — Resets all sliders and settings back to their defaults and removes any halftone preview layers.</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Export</h3>
-      <div class="section-split">
-        <div class="section-thumb">
-          <img src="images/dtf_halftone_prep_export.jpg" alt="Export section" />
-        </div>
-        <div class="section-desc">
-          <p>Save your finished artwork as a transparent PNG ready for DTF printing.</p>
-          <ul>
-            <li><strong>Size mode</strong> — Choose between <strong>Inches + DPI</strong> or <strong>Pixels</strong> to set the export dimensions.</li>
-            <li>The width, height, and DPI default to your document's current size. You can change them manually if needed.</li>
-            <li>Click <strong>Export PNG (Transparent)</strong> to save the file. You'll be prompted to choose where to save it.</li>
-          </ul>
         </div>
       </div>
     </div>
 
-    <!-- ─── Tips ─────────────────────────────────────── -->
-    <div class="section" id="tips">
-      <h2>Tips for Best Results</h2>
-      <div class="tip-grid">
-        <div class="tip-card">
-          <strong>Dark shirts</strong>
-          <p>Check "Invert Halftone" so the dots represent where ink is printed. White ink goes down first, then the halftone pattern is printed on top.</p>
-        </div>
-        <div class="tip-card">
-          <strong>Light shirts</strong>
-          <p>Leave "Invert Halftone" off. The dots represent transparent areas where the shirt color shows through.</p>
-        </div>
-        <div class="tip-card">
-          <strong>Dot size matters</strong>
-          <p>For high-resolution images (above 2000px), the default dot size is 24. For smaller images, it's 8. Larger dots are bolder, smaller dots are more detailed.</p>
-        </div>
-        <div class="tip-card">
-          <strong>Line angle</strong>
-          <p>A 45&deg; angle is the standard for halftones. 0&deg; gives horizontal lines, 90&deg; gives vertical lines.</p>
-        </div>
-        <div class="tip-card">
-          <strong>No half-pixels</strong>
-          <p>The plugin automatically ensures every pixel is either fully opaque or fully transparent — no soft edges that could cause printing issues.</p>
-        </div>
-        <div class="tip-card">
-          <strong>Use Levels for contrast</strong>
-          <p>Instead of a simple contrast slider, use the Levels section to fine-tune shadows, midtones, and highlights — just like you would in Photoshop's Levels dialog.</p>
+    <!-- ─── Tab Navigation ───────────────────────────── -->
+    <div class="guide-tabs">
+      <button class="guide-tab-btn active" data-guide-tab="halftone">Halftone</button>
+      <button class="guide-tab-btn" data-guide-tab="vinyl">Vinyl Prep</button>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- HALFTONE TAB                                    -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="guide-tab-content active" id="guide-halftone">
+
+      <div class="section" id="halftone-tab">
+        <h2>Halftone</h2>
+        <p>The Halftone tab creates dot or line halftone patterns for DTF (Direct to Film) printing.</p>
+
+        <h3>Quick Start</h3>
+        <ol class="steps">
+          <li><span>Open an image in Photoshop.</span></li>
+          <li><span>In the plugin, pick the <strong>Source Layer</strong> you want to apply the halftone to.</span></li>
+          <li><span>Set your <strong>Base Color</strong> to match the garment or substrate you're printing on.</span></li>
+          <li><span>Adjust the <strong>Halftone Settings</strong> and <strong>Levels</strong> to taste.</span></li>
+          <li><span>Click <strong>Create Halftone</strong> to preview the result.</span></li>
+          <li><span>When you're happy, click <strong>Apply Halftone as Mask</strong> to apply it to your original image.</span></li>
+          <li><span>Use the <strong>Export</strong> section to save a print-ready transparent PNG.</span></li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <h3>Base Color</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/dtf_halftone_prep_baseColor.png" alt="Base Color section" />
+          </div>
+          <div class="section-desc">
+            <p>Set the color of the shirt or substrate you're printing on. This creates a "Base Color" layer behind your artwork so you can preview how the halftone will look on the final product. The default is black (<code>#000000</code>).</p>
+            <ul>
+              <li><strong>Hex input</strong> — Type a hex color code (e.g. <code>#000000</code> for black, <code>#FFFFFF</code> for white) and click <strong>Set Base Color</strong>.</li>
+              <li><strong>Eyedropper</strong> (dropper icon) — Click the eyedropper button, then click anywhere on the canvas to sample a color.</li>
+              <li><strong>Color swatch</strong> (colored square) — Click the square to open a color picker where you can visually choose a color from the spectrum.</li>
+              <li><strong>Show shirt color preview</strong> — Toggle this on/off to show or hide the base color layer behind your artwork.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div class="section">
+        <h3>Halftone Settings</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/dtf_halftone_prep_halftoneSettings.jpg" alt="Halftone Settings section" />
+          </div>
+          <div class="section-desc">
+            <table>
+              <tr>
+                <th>Setting</th>
+                <th>What it does</th>
+              </tr>
+              <tr>
+                <td>Type</td>
+                <td><strong>Dot</strong> creates circular halftone dots. <strong>Line</strong> creates parallel line patterns.</td>
+              </tr>
+              <tr>
+                <td>Dot / Line Size</td>
+                <td>Controls how large the dots or lines are. Larger values = bigger pattern elements.</td>
+              </tr>
+              <tr>
+                <td>Angle</td>
+                <td>Rotates the halftone pattern (0&deg; to 90&deg;).</td>
+              </tr>
+              <tr>
+                <td>Threshold</td>
+                <td>Controls the cutoff between black and white. Lower values = more white. Higher values = more black. Most useful for the Line type.</td>
+              </tr>
+              <tr>
+                <td>Invert Halftone</td>
+                <td>Swaps the black and white in the halftone pattern. Use this when printing on dark shirts — the dots represent where ink IS applied instead of where it ISN'T.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Levels</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/dtf_halftone_prep_levels.jpg" alt="Levels section" />
+          </div>
+          <div class="section-desc">
+            <p>Fine-tune the tonal range of your image before the halftone is applied. These work just like Photoshop's <strong>Image &gt; Adjustments &gt; Levels</strong> dialog.</p>
+            <table>
+              <tr>
+                <th>Slider</th>
+                <th>What it does</th>
+              </tr>
+              <tr>
+                <td>Shadows</td>
+                <td>Sets the black point (0–253). Slide right to crush darker tones to pure black. Default: 0.</td>
+              </tr>
+              <tr>
+                <td>Midtones</td>
+                <td>Adjusts the gamma / midpoint. Slide left to darken the midtones, right to brighten them. Default: 1.00 (no change).</td>
+              </tr>
+              <tr>
+                <td>Highlights</td>
+                <td>Sets the white point (2–255). Slide left to push brighter tones to pure white. Default: 255.</td>
+              </tr>
+            </table>
+            <div class="callout info">
+              <strong>Tip:</strong> Try pulling the Shadows up and Highlights down to increase contrast before halftoning — this often produces cleaner, more defined patterns.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Preview &amp; Mask</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/dtf_halftone_prep_preview_mask.jpg" alt="Preview & Mask section" />
+          </div>
+          <div class="section-desc">
+            <ul>
+              <li><strong>Live Preview</strong> — When enabled, the halftone updates automatically as you change settings. Turn this off if your computer feels slow while adjusting sliders.</li>
+              <li><strong>Create Halftone</strong> — Generates a halftone preview layer. After the first click, the button changes to <strong>Update Halftone</strong> so you can re-apply after tweaking settings.</li>
+              <li><strong>Apply Halftone as Mask</strong> — Applies the halftone pattern as a layer mask on your original image. This is your "commit" step — the halftone controls which parts of your artwork are visible. The preview layer is hidden automatically.</li>
+              <li><strong>Reset to Defaults</strong> — Resets all sliders and settings back to their defaults and removes any halftone preview layers.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Export</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/dtf_halftone_prep_export.jpg" alt="Export section" />
+          </div>
+          <div class="section-desc">
+            <p>Save your finished artwork as a transparent PNG ready for DTF printing.</p>
+            <ul>
+              <li><strong>Size mode</strong> — Choose between <strong>Inches + DPI</strong> or <strong>Pixels</strong> to set the export dimensions.</li>
+              <li>The width, height, and DPI default to your document's current size. You can change them manually if needed.</li>
+              <li>Click <strong>Export PNG (Transparent)</strong> to save the file. You'll be prompted to choose where to save it.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Halftone Tips</h2>
+        <div class="tip-grid">
+          <div class="tip-card">
+            <strong>Dark shirts</strong>
+            <p>Check "Invert Halftone" so the dots represent where ink is printed. White ink goes down first, then the halftone pattern is printed on top.</p>
+          </div>
+          <div class="tip-card">
+            <strong>Light shirts</strong>
+            <p>Leave "Invert Halftone" off. The dots represent transparent areas where the shirt color shows through.</p>
+          </div>
+          <div class="tip-card">
+            <strong>Dot size matters</strong>
+            <p>For high-resolution images (above 2000px), the default dot size is 24. For smaller images, it's 8. Larger dots are bolder, smaller dots are more detailed.</p>
+          </div>
+          <div class="tip-card">
+            <strong>Line angle</strong>
+            <p>A 45&deg; angle is the standard for halftones. 0&deg; gives horizontal lines, 90&deg; gives vertical lines.</p>
+          </div>
+          <div class="tip-card">
+            <strong>No half-pixels</strong>
+            <p>The plugin automatically ensures every pixel is either fully opaque or fully transparent — no soft edges that could cause printing issues.</p>
+          </div>
+          <div class="tip-card">
+            <strong>Use Levels for contrast</strong>
+            <p>Instead of a simple contrast slider, use the Levels section to fine-tune shadows, midtones, and highlights — just like you would in Photoshop's Levels dialog.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /guide-halftone -->
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- VINYL PREP TAB                                  -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="guide-tab-content" id="guide-vinyl">
+
+      <div class="section" id="vinyl-tab">
+        <h2>Vinyl Prep</h2>
+        <p>The Vinyl tab reduces your image to a small number of flat colors and creates cutter-ready vector shapes, ready to export as SVG for vinyl cutting machines like Cricut, Silhouette, and others.</p>
+
+        <h3>Quick Start</h3>
+        <ol class="steps">
+          <li><span>Open an image in Photoshop.</span></li>
+          <li><span>Pick the <strong>Source Layer</strong> with your artwork.</span></li>
+          <li><span>Adjust the <strong>Vinyl Settings</strong> (colors, smoothing, detail, tolerance).</span></li>
+          <li><span>Click <strong>Preview</strong> to see the result &mdash; color-separated shape layers appear in your document.</span></li>
+          <li><span>Adjust any slider and click <strong>Preview</strong> again to iterate until you're happy.</span></li>
+          <li><span>Click <strong>Export SVG</strong> to save a cutter-ready SVG file with all colors.</span></li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <h3>Vinyl Settings</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/vinyl_settings.png" alt="Vinyl Settings section" />
+          </div>
+          <div class="section-desc">
+            <table>
+              <tr>
+                <th>Setting</th>
+                <th>Range</th>
+                <th>What it does</th>
+              </tr>
+              <tr>
+                <td>Max Colors</td>
+                <td>2 – 5</td>
+                <td>The maximum number of flat colors in the final result. The plugin analyzes your image, reduces it to this many colors, and separates each color into its own layer.</td>
+              </tr>
+              <tr>
+                <td>Edge Smooth</td>
+                <td>0 – 5</td>
+                <td>Applies a median filter to clean up noise and soften jagged edges while keeping hard color boundaries crisp. Higher values = smoother edges, but may lose fine detail.</td>
+              </tr>
+              <tr>
+                <td>Min Detail</td>
+                <td>0 – 20</td>
+                <td>Removes features that are too small for a vinyl cutter to cut or weed. Higher values = more aggressive filtering. Set to 0 to keep all detail.</td>
+              </tr>
+              <tr>
+                <td>Tolerance</td>
+                <td>1 – 20</td>
+                <td>Controls how closely the vector paths follow the pixel edges. Lower values = more anchor points, more accurate. Higher values = fewer points, smoother curves that are easier for cutters to follow.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Preview</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/vinyl_preview.png" alt="Vinyl Preview" />
+          </div>
+          <div class="section-desc">
+            <p>Click <strong>Preview</strong> to run the full pipeline:</p>
+            <ol>
+              <li><strong>Color reduction</strong> — The image is posterized and reduced to the specified number of colors. Each color is separated into its own layer inside a "DTF Vinyl Colors" folder.</li>
+              <li><strong>Shape creation</strong> — Each color layer is converted into a solid-color vector shape layer with cutter-friendly edges. Small details are filtered out based on Min Detail. All shapes are grouped in a "DTF Vinyl Shapes" folder.</li>
+            </ol>
+            <p>The shape layers are immediately visible in Photoshop so you can inspect the result. Adjust any slider and click <strong>Preview</strong> again — the previous result is automatically replaced.</p>
+            <p>After previewing, color chips appear below the button showing which colors were detected.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Export</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/vinyl_export.png" alt="Export Settings section" />
+          </div>
+          <div class="section-desc">
+            <ul>
+              <li><strong>Export SVG</strong> — Saves all color shapes as a single SVG file with fill colors and proper alignment. Compatible with Adobe Illustrator, Cricut Design Space, Silhouette Studio, Inkscape, and any software that opens SVG files.</li>
+              <li><strong>Reset Vinyl Prep</strong> — Removes all vinyl prep layers (color separations, shape layers, and the working layer) and resets the plugin to a clean state.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Vinyl Tips</h2>
+        <div class="tip-grid">
+          <div class="tip-card">
+            <strong>Start with fewer colors</strong>
+            <p>Try Max Colors at 2 or 3 first. You can always increase if the result is too simplified.</p>
+          </div>
+          <div class="tip-card">
+            <strong>Adjust Min Detail for your cutter</strong>
+            <p>If your cutter struggles with small shapes, increase Min Detail to filter them out. If you're losing important detail, lower it.</p>
+          </div>
+          <div class="tip-card">
+            <strong>Tolerance is your friend</strong>
+            <p>A tolerance of 3–5 works well for most vinyl cutting. Go higher (8–12) for very smooth shapes. Go lower (1–2) if accuracy matters more.</p>
+          </div>
+          <div class="tip-card">
+            <strong>Edge Smooth cleans up noise</strong>
+            <p>Even 1px of smoothing removes stray single-pixel artifacts. Increase to 3–5 for noisy or low-resolution source images.</p>
+          </div>
+          <div class="tip-card">
+            <strong>Check shapes before exporting</strong>
+            <p>After clicking Preview, zoom in on the shape layers. You can manually edit individual shapes in Photoshop before exporting.</p>
+          </div>
+          <div class="tip-card">
+            <strong>SVG preserves colors</strong>
+            <p>The exported SVG includes the fill color for each shape, so your cutter software knows which vinyl color to use for each layer.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /guide-vinyl -->
 
     <!-- ─── FAQs ─────────────────────────────────────── -->
     <div class="section" id="faqs">
       <h2>FAQs</h2>
+
+      <h3>General</h3>
       <details>
         <summary><strong>The plugin says it unlocked my layer — is that OK?</strong></summary>
-        <p>Yes. If your source layer is locked (like the default "Background" layer), the plugin will automatically unlock it so it can apply the halftone. You'll see a notification letting you know. This is safe and you can re-lock the layer afterward if needed.</p>
+        <p>Yes. If your source layer is locked (like the default "Background" layer), the plugin will automatically unlock it so it can work. You'll see a notification letting you know. This is safe and you can re-lock the layer afterward if needed.</p>
       </details>
       <details>
         <summary><strong>Why is the layer list empty or outdated?</strong></summary>
-        <p>Click <strong>Refresh Layers</strong> in the Source Layer section. The list also updates automatically when you add or remove layers, but a manual refresh can help.</p>
-      </details>
-      <details>
-        <summary><strong>Why does the halftone preview look wrong after editing?</strong></summary>
-        <p>Click <strong>Update Halftone</strong> to regenerate with your current settings. The preview doesn't auto-update when you edit the source image outside the plugin.</p>
+        <p>Click the <strong>Refresh</strong> button in the Source Layer section. The list also updates automatically when you add or remove layers, but a manual refresh can help.</p>
       </details>
       <details>
         <summary><strong>Why is the plugin panel cut off?</strong></summary>
         <p>The panel is scrollable — scroll down to see all sections. You can also resize the panel by dragging its edges.</p>
+      </details>
+
+      <h3>Halftone</h3>
+      <details>
+        <summary><strong>Why does the halftone preview look wrong after editing?</strong></summary>
+        <p>Click <strong>Update Halftone</strong> to regenerate with your current settings. The preview doesn't auto-update when you edit the source image outside the plugin.</p>
       </details>
       <details>
         <summary><strong>Why does the eyedropper button time out?</strong></summary>
@@ -317,8 +465,36 @@
         <summary><strong>What are the Levels sliders for?</strong></summary>
         <p>They work just like Photoshop's Levels adjustment (Image &gt; Adjustments &gt; Levels). Shadows controls the black point, Midtones adjusts the gamma, and Highlights controls the white point. Use them to fine-tune the tonal range before the halftone is applied for cleaner results.</p>
       </details>
+
+      <h3>Vinyl Prep</h3>
+      <details>
+        <summary><strong>The vinyl preview has too few or too many colors</strong></summary>
+        <p>Adjust the <strong>Max Colors</strong> slider and click <strong>Preview</strong> again. The plugin will re-analyze the image and reduce to the new color count.</p>
+      </details>
+      <details>
+        <summary><strong>The vinyl shapes are too small or too detailed for my cutter</strong></summary>
+        <p>Increase <strong>Min Detail</strong> to filter out features that are too small to cut or weed. Increase <strong>Tolerance</strong> for simpler curves with fewer anchor points.</p>
+      </details>
+      <details>
+        <summary><strong>The Export SVG button gives an error</strong></summary>
+        <p>Make sure you've clicked <strong>Preview</strong> first to generate the shape layers. The export reads data from the shape layers created during preview.</p>
+      </details>
+      <details>
+        <summary><strong>Can I edit the shapes before exporting?</strong></summary>
+        <p>Yes. After clicking Preview, the shape layers appear in your Photoshop layers panel. You can use Photoshop's path tools to adjust individual shapes before exporting.</p>
+      </details>
+      <details>
+        <summary><strong>What software can open the exported SVG?</strong></summary>
+        <p>The SVG file works with Adobe Illustrator, Cricut Design Space, Silhouette Studio, Inkscape, and any other application that supports SVG files. Each color is a separate path element with its fill color preserved.</p>
+      </details>
     </div>
 
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="lightbox-overlay" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
   </div>
 
   <!-- Video Modal -->
@@ -334,6 +510,22 @@
 
   <script>
     (function () {
+      /* ── Guide Tab Switching ── */
+      var tabBtns = document.querySelectorAll('.guide-tab-btn');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function (e) {
+          var target = e.currentTarget.getAttribute('data-guide-tab');
+          var allBtns = document.querySelectorAll('.guide-tab-btn');
+          var allTabs = document.querySelectorAll('.guide-tab-content');
+          for (var j = 0; j < allBtns.length; j++) allBtns[j].classList.remove('active');
+          for (var k = 0; k < allTabs.length; k++) allTabs[k].classList.remove('active');
+          e.currentTarget.classList.add('active');
+          var panel = document.getElementById('guide-' + target);
+          if (panel) panel.classList.add('active');
+        });
+      }
+
+      /* ── Video Modal ── */
       var modal = document.getElementById('videoModal');
       var video = document.getElementById('demoVideo');
       var openBtn = document.getElementById('openDemoBtn');
@@ -360,6 +552,40 @@
 
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+      });
+
+      /* ── Image Lightbox ── */
+      var lbOverlay = document.getElementById('lightboxModal');
+      var lbImg = document.getElementById('lightboxImg');
+      var lbClose = document.getElementById('lightboxClose');
+
+      document.querySelectorAll('.section-thumb img, .screenshot img').forEach(function (img) {
+        img.classList.add('clickable-thumb');
+        img.addEventListener('click', function () {
+          lbImg.src = this.src;
+          lbImg.alt = this.alt;
+          lbOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      lbClose.addEventListener('click', function () {
+        lbOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      lbOverlay.addEventListener('click', function (e) {
+        if (e.target === lbOverlay) {
+          lbOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lbOverlay.classList.contains('active')) {
+          lbOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
       });
     })();
   </script>

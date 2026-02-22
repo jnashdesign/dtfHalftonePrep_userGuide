@@ -9,6 +9,10 @@ body {
   background: #f7f7f8;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 /* ── Hero Header ──────────────────────────────────── */
 .hero {
   background: linear-gradient(135deg, #1b1b1b 0%, #2d2d2d 100%);
@@ -438,6 +442,109 @@ details p {
 }
 .video-modal-close:hover {
   color: #ccc;
+}
+
+/* ── Image Lightbox ──────────────────────────────── */
+.clickable-thumb {
+  cursor: zoom-in;
+  transition: opacity 0.2s;
+}
+.clickable-thumb:hover {
+  opacity: 0.8;
+}
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-overlay.active {
+  display: flex;
+}
+.lightbox-img {
+  max-width: 80vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+}
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10000;
+  transition: opacity 0.2s;
+}
+.lightbox-close:hover {
+  opacity: 0.7;
+}
+
+/* ── Guide Tab Navigation ────────────────────────── */
+.guide-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+  border-bottom: 2px solid #e0e0e0;
+}
+.guide-tab-btn {
+  flex: 1;
+  background: #f5f5f7;
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  color: #888;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 14px 16px;
+  cursor: pointer;
+  margin: 0;
+  margin-bottom: -2px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.guide-tab-btn:first-child {
+  margin-right: 4px;
+}
+.guide-tab-btn:hover {
+  color: #333;
+  background: #ebebed;
+}
+.guide-tab-btn.active {
+  color: #1b1b1b;
+  background: #fff;
+  border-color: #e0e0e0;
+  border-bottom-color: #fff;
+}
+.guide-tab-content {
+  display: none;
+}
+.guide-tab-content.active {
+  display: block;
+}
+
+/* ── Screenshot Placeholder (empty) ──────────────── */
+.screenshot-placeholder {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  padding: 40px 20px;
+  margin: 16px 0;
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
+  font-style: italic;
 }
 
 /* ── Responsive ───────────────────────────────────── */
