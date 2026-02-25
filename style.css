@@ -514,9 +514,7 @@ details p {
   margin-bottom: -2px;
   transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
-.guide-tab-btn:first-child {
-  margin-right: 4px;
-}
+
 .guide-tab-btn:hover {
   color: #333;
   background: #ebebed;
@@ -526,13 +524,21 @@ details p {
   background: #fff;
   border-color: #e0e0e0;
   border-bottom-color: #fff;
+  margin-bottom: -3px;
 }
 .guide-tab-content {
   display: none;
+  border: 1px solid #e0e0e0;
+}
+.guide-tab-content .section {
+  margin: 10px;
+  background: #f1f1f1;
 }
 .guide-tab-content.active {
   display: block;
+  background: #fff;
 }
+
 
 /* ── Screenshot Placeholder (empty) ──────────────── */
 .screenshot-placeholder {

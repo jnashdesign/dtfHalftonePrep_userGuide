@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DTF Halftone Prep — Download & User Guide</title>
+  <title>Print Prep Studio — Download & User Guide</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="./favicon.png" />
 </head>
@@ -11,15 +11,19 @@
 
   <!-- Hero -->
   <div class="hero">
-    <img src="images/dtfHalftonePrepBanner.svg" alt="DTF Halftone Prep" style="width:100%;max-width:600px;height:auto;">
-    <p>A Photoshop plugin for creating halftone patterns for DTF printing and vinyl-ready color separations for cutting machines. Two tools in one panel — switch between them using the Halftone and Vinyl tabs.</p>
+    <img src="images/printPrepStudioBanner.svg" alt="Print Prep Studio" style="width:100%;max-width:600px;height:auto;">
+    <p>A Photoshop plugin for creating halftone patterns, vinyl-ready cut shapes, and screen print separations. Three tools in one panel — switch between the Halftone, Vinyl Prep, and Screen Print tabs.</p>
   </div>
 
   <div class="container">
 
     <div class="hero-actions">
-      <a target="_blank" class="downloadLink" href="../dtfHalftonePrep_PS_plugin.zip">Download DTF Halftone Prep Plugin</a>
-      <a href="#" class="downloadLink demo-link" id="openDemoBtn">Watch Demo</a>
+      <a target="_blank" class="downloadLink" href="./printPrepStudio_plugin.zip">Download Print Prep Studio Plugin</a>
+      </div>
+      <div class="hero-actions">
+      <a href="#" class="downloadLink demo-link" id="openDemoBtn" data-demo-video-src="./assets/pps_halftone_demo.mp4">Watch Halftone Demo</a>
+      <a href="#" class="downloadLink demo-link" data-demo-video-src="./assets/pps_vinyl_demo.mp4">Watch Vinyl Demo</a>
+      <a href="#" class="downloadLink demo-link" data-demo-video-src="./assets/pps_screens_demo.mov">Watch Screen Print Demo</a>
     </div>
     <!-- Table of Contents -->
     <nav class="toc">
@@ -28,8 +32,10 @@
         <li><a href="#requirements">Requirements</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#source-layer">Source Layer</a></li>
+        <li><a href="#export-size-shared">Export Size (Shared)</a></li>
         <li><a href="#halftone-tab">Halftone Tab</a></li>
         <li><a href="#vinyl-tab">Vinyl Prep Tab</a></li>
+        <li><a href="#screen-tab">Screen Print Tab</a></li>
         <li><a href="#faqs">FAQs</a></li>
       </ul>
     </nav>
@@ -57,12 +63,12 @@
           <span>Creative Cloud will open and show a confirmation dialog. Click <strong>Install</strong> to continue.</span>
         </li>
         <li><span>Open (or restart) Photoshop.</span></li>
-        <li><span>Go to <strong>Plugins &gt; DTF Halftone Prep &gt; DTF Halftone Prep</strong> to open the panel.</span></li>
+        <li><span>Go to <strong>Plugins &gt; Print Prep Studio &gt; Print Prep Studio</strong> to open the panel.</span></li>
       </ol>
 
       <div class="screenshot">
-        <img src="images/plugins-menu.png" alt="Photoshop Plugins menu showing DTF Halftone Prep" />
-        <div class="caption">The plugin appears under Plugins &gt; DTF Halftone Prep in the Photoshop menu bar.</div>
+        <img src="images/plugins-menu.png" alt="Photoshop Plugins menu showing Print Prep Studio" />
+        <div class="caption">The plugin appears under Plugins &gt; Print Prep Studio in the Photoshop menu bar.</div>
       </div>
 
       <div class="callout info">
@@ -115,21 +121,35 @@
       <h2>Source Layer</h2>
       <div class="section-split">
         <div class="section-thumb">
-          <img src="images/dtf_halftone_prep_sourceLayer.jpg" alt="Source Layer section" />
+          <img src="images/prep_sourceLayer.jpg" alt="Source Layer section" />
         </div>
         <div class="section-desc">
-          <p>Both the <strong>Halftone</strong> and <strong>Vinyl</strong> tabs share the same Source Layer selector at the top of the plugin. Choose which layer in your document the effect should be applied to. If your file has multiple layers, use the dropdown to select the one with your artwork. Click the <strong>Refresh</strong> button if you've added or renamed layers since opening the plugin.</p>
+          <p>All tabs (<strong>Halftone</strong>, <strong>Vinyl Prep</strong>, and <strong>Screen Print</strong>) share the same Source Layer selector at the top of the plugin. Choose which layer in your document the effect should be applied to. If your file has multiple layers, use the dropdown to select the one with your artwork. Click the <strong>Refresh</strong> button if you've added or renamed layers since opening the plugin.</p>
           <div class="callout info">
             <strong>Locked layers:</strong> If the source layer is locked (like the default "Background" layer), the plugin will automatically unlock it for you and let you know with a notification.
           </div>
+          <div class="callout info">
+            <strong>Step-by-step workflow:</strong> Some actions stay disabled until the required previous step is completed. Hover a disabled button to see exactly what needs to be done first.
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="section" id="export-size-shared">
+      <h2>Export Size (Shared)</h2>
+      <p>The <strong>Export Size</strong> section is global and applies to all export actions across the plugin. Set it once, then export from any tab.</p>
+      <ul>
+        <li><strong>Size mode</strong> — Choose <strong>Inches + DPI</strong> or <strong>Pixels</strong>.</li>
+        <li><strong>Width/Height/DPI</strong> — Control final export dimensions used by Halftone PNG and Screen Print separation exports.</li>
+        <li>The fields auto-sync to your active document size by default, and can be edited manually at any time.</li>
+      </ul>
     </div>
 
     <!-- ─── Tab Navigation ───────────────────────────── -->
     <div class="guide-tabs">
       <button class="guide-tab-btn active" data-guide-tab="halftone">Halftone</button>
       <button class="guide-tab-btn" data-guide-tab="vinyl">Vinyl Prep</button>
+      <button class="guide-tab-btn" data-guide-tab="screen">Screen Print</button>
     </div>
 
     <!-- ═══════════════════════════════════════════════ -->
@@ -149,7 +169,8 @@
           <li><span>Adjust the <strong>Halftone Settings</strong> and <strong>Levels</strong> to taste.</span></li>
           <li><span>Click <strong>Create Halftone</strong> to preview the result.</span></li>
           <li><span>When you're happy, click <strong>Apply Halftone as Mask</strong> to apply it to your original image.</span></li>
-          <li><span>Use the <strong>Export</strong> section to save a print-ready transparent PNG.</span></li>
+          <li><span>Set output dimensions in the shared <strong>Export Size</strong> section.</span></li>
+          <li><span>Use the Halftone <strong>Export for DTF Film</strong> button to save a print-ready transparent PNG.</span></li>
         </ol>
       </div>
 
@@ -157,7 +178,7 @@
         <h3>Base Color</h3>
         <div class="section-split">
           <div class="section-thumb">
-            <img src="images/dtf_halftone_prep_baseColor.png" alt="Base Color section" />
+            <img src="images/prep_baseColor.png" alt="Base Color section" />
           </div>
           <div class="section-desc">
             <p>Set the color of the shirt or substrate you're printing on. This creates a "Base Color" layer behind your artwork so you can preview how the halftone will look on the final product. The default is black (<code>#000000</code>).</p>
@@ -175,7 +196,7 @@
         <h3>Halftone Settings</h3>
         <div class="section-split">
           <div class="section-thumb">
-            <img src="images/dtf_halftone_prep_halftoneSettings.jpg" alt="Halftone Settings section" />
+            <img src="images/prep_halftoneSettings.jpg" alt="Halftone Settings section" />
           </div>
           <div class="section-desc">
             <table>
@@ -212,7 +233,7 @@
         <h3>Levels</h3>
         <div class="section-split">
           <div class="section-thumb">
-            <img src="images/dtf_halftone_prep_levels.jpg" alt="Levels section" />
+            <img src="images/prep_levels.jpg" alt="Levels section" />
           </div>
           <div class="section-desc">
             <p>Fine-tune the tonal range of your image before the halftone is applied. These work just like Photoshop's <strong>Image &gt; Adjustments &gt; Levels</strong> dialog.</p>
@@ -245,7 +266,7 @@
         <h3>Preview &amp; Mask</h3>
         <div class="section-split">
           <div class="section-thumb">
-            <img src="images/dtf_halftone_prep_preview_mask.jpg" alt="Preview & Mask section" />
+            <img src="images/prep_preview_mask.png" alt="Preview & Mask section" />
           </div>
           <div class="section-desc">
             <ul>
@@ -262,14 +283,15 @@
         <h3>Export</h3>
         <div class="section-split">
           <div class="section-thumb">
-            <img src="images/dtf_halftone_prep_export.jpg" alt="Export section" />
+            <img src="images/prep_export.png" alt="Export section" />
+            <img src="images/export_size.png" alt="Export size section" />
           </div>
           <div class="section-desc">
             <p>Save your finished artwork as a transparent PNG ready for DTF printing.</p>
             <ul>
-              <li><strong>Size mode</strong> — Choose between <strong>Inches + DPI</strong> or <strong>Pixels</strong> to set the export dimensions.</li>
-              <li>The width, height, and DPI default to your document's current size. You can change them manually if needed.</li>
-              <li>Click <strong>Export PNG (Transparent)</strong> to save the file. You'll be prompted to choose where to save it.</li>
+              <li>Click <strong>Export for DTF Film</strong> to save the file. You'll be prompted to choose where to save it.</li>
+              <li>The exported size comes from the shared <strong>Export Size</strong> section (outside the tabs).</li>
+              <li>If export is disabled, hover the button to see the required prerequisite.</li>
             </ul>
           </div>
         </div>
@@ -321,8 +343,8 @@
           <li><span>Open an image in Photoshop.</span></li>
           <li><span>Pick the <strong>Source Layer</strong> with your artwork.</span></li>
           <li><span>Adjust the <strong>Vinyl Settings</strong> (colors, smoothing, detail, tolerance).</span></li>
-          <li><span>Click <strong>Preview</strong> to see the result &mdash; color-separated shape layers appear in your document.</span></li>
-          <li><span>Adjust any slider and click <strong>Preview</strong> again to iterate until you're happy.</span></li>
+          <li><span>Click <strong>Create Vinyl Shapes</strong> to process the artwork and build shape layers.</span></li>
+          <li><span>Adjust any slider and click <strong>Create Vinyl Shapes</strong> again to iterate until you're happy.</span></li>
           <li><span>Click <strong>Export SVG</strong> to save a cutter-ready SVG file with all colors.</span></li>
         </ol>
       </div>
@@ -366,19 +388,21 @@
       </div>
 
       <div class="section">
-        <h3>Preview</h3>
+        <h3>Create Vinyl Shapes</h3>
         <div class="section-split">
           <div class="section-thumb">
             <img src="images/vinyl_preview.png" alt="Vinyl Preview" />
           </div>
           <div class="section-desc">
-            <p>Click <strong>Preview</strong> to run the full pipeline:</p>
+            <p>Click <strong>Create Vinyl Shapes</strong> to run the full pipeline:</p>
             <ol>
-              <li><strong>Color reduction</strong> — The image is posterized and reduced to the specified number of colors. Each color is separated into its own layer inside a "DTF Vinyl Colors" folder.</li>
-              <li><strong>Shape creation</strong> — Each color layer is converted into a solid-color vector shape layer with cutter-friendly edges. Small details are filtered out based on Min Detail. All shapes are grouped in a "DTF Vinyl Shapes" folder.</li>
+              <li><strong>Color reduction</strong> — The image is posterized and reduced to the specified number of colors.</li>
+              <li><strong>Shape creation</strong> — Each color is converted into a solid-color vector shape layer with cutter-friendly edges. Small details are filtered out based on Min Detail.</li>
+              <li><strong>Final layer structure</strong> — The workflow keeps only shape layers inside a single <strong>"Vinyl Shapes"</strong> folder (pixel prep layers are removed).</li>
             </ol>
-            <p>The shape layers are immediately visible in Photoshop so you can inspect the result. Adjust any slider and click <strong>Preview</strong> again — the previous result is automatically replaced.</p>
+            <p>The shape layers are immediately visible in Photoshop so you can inspect the result. Adjust any slider and click <strong>Create Vinyl Shapes</strong> again — the previous result is automatically replaced.</p>
             <p>After previewing, color chips appear below the button showing which colors were detected.</p>
+            <p>If the image has fewer significant colors than requested, the plugin uses the actual detected color count and reports it in the status message (instead of creating random extra color layers).</p>
           </div>
         </div>
       </div>
@@ -388,11 +412,13 @@
         <div class="section-split">
           <div class="section-thumb">
             <img src="images/vinyl_export.png" alt="Export Settings section" />
+            <img src="images/export_size.png" alt="Export size section" />
           </div>
           <div class="section-desc">
             <ul>
               <li><strong>Export SVG</strong> — Saves all color shapes as a single SVG file with fill colors and proper alignment. Compatible with Adobe Illustrator, Cricut Design Space, Silhouette Studio, Inkscape, and any software that opens SVG files.</li>
               <li><strong>Reset Vinyl Prep</strong> — Removes all vinyl prep layers (color separations, shape layers, and the working layer) and resets the plugin to a clean state.</li>
+              <li>Export dimensions come from the shared <strong>Export Size</strong> section.</li>
             </ul>
           </div>
         </div>
@@ -419,7 +445,7 @@
           </div>
           <div class="tip-card">
             <strong>Check shapes before exporting</strong>
-            <p>After clicking Preview, zoom in on the shape layers. You can manually edit individual shapes in Photoshop before exporting.</p>
+            <p>After clicking <strong>Create Vinyl Shapes</strong>, zoom in on the shape layers. You can manually edit individual shapes in Photoshop before exporting.</p>
           </div>
           <div class="tip-card">
             <strong>SVG preserves colors</strong>
@@ -430,6 +456,94 @@
 
     </div><!-- /guide-vinyl -->
 
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCREEN PRINT TAB                                -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="guide-tab-content" id="guide-screen">
+      <div class="section" id="screen-tab">
+        <h2>Screen Print</h2>
+        <p>The Screen Print tab creates spot-color halftone separations with per-channel angles and optional white underbase, then exports each screen as a black-on-transparent PNG.</p>
+
+        <h3>Quick Start</h3>
+        <ol class="steps">
+          <li><span>Open an image in Photoshop.</span></li>
+          <li><span>Pick the <strong>Source Layer</strong> with your artwork.</span></li>
+          <li><span>Adjust <strong>Max Colors</strong>, <strong>Edge Smooth</strong>, <strong>Dot Size</strong>, and <strong>Underbase</strong>.</span></li>
+          <li><span>Click <strong>Create Screens</strong> to generate separation layers.</span></li>
+          <li><span>Inspect the colored separation preview layers inside the <strong>Screens</strong> folder.</span></li>
+          <li><span>Set output dimensions in shared <strong>Export Size</strong>, then click <strong>Export Screens</strong>.</span></li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <h3>Screen Print Settings</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/screenPrint_settings.png" alt="Screen Print Settings section" />
+          </div>
+          <div class="section-desc">
+            <table>
+              <tr>
+                <th>Setting</th>
+                <th>What it does</th>
+              </tr>
+              <tr>
+                <td>Max Colors</td>
+                <td>Maximum number of spot colors to keep for separation.</td>
+              </tr>
+              <tr>
+                <td>Edge Smooth</td>
+                <td>Applies median smoothing before separation to clean noise and jagged transitions.</td>
+              </tr>
+              <tr>
+                <td>Dot Size</td>
+                <td>Controls effective halftone dot scale for all separated colors.</td>
+              </tr>
+              <tr>
+                <td>Underbase</td>
+                <td>Adds a white underbase screen where non-black inks print for better opacity on dark garments.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Layer Structure</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/screenPrint_layers.png" alt="Screen Print layers in Photoshop" />
+          </div>
+          <div class="section-desc">
+            <ul>
+              <li>Each detected spot color becomes a solid color fill layer with a halftone mask.</li>
+              <li>Separations are grouped in a folder named <strong>"Screens"</strong>.</li>
+              <li>The optional underbase is a white fill layer named <strong>"Screen Underbase"</strong>.</li>
+              <li>The prep/working layer is named <strong>"Screen Prep"</strong> and hidden automatically.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Export Screens</h3>
+        <div class="section-split">
+          <div class="section-thumb">
+            <img src="images/screenPrint_export.png" alt="Screen Print export section" />
+            <img src="images/export_size.png" alt="Export size section" />
+          </div>
+          <div class="section-desc">
+            <ul>
+              <li><strong>Export Screens</strong> writes one PNG per separation (including underbase when enabled).</li>
+              <li>Each file is black ink on transparent background, ready for film output / burning screens.</li>
+              <li>Export dimensions come from the shared <strong>Export Size</strong> section.</li>
+              <li>If the export button is disabled, hover it for the prerequisite message.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- /guide-screen -->
+
     <!-- ─── FAQs ─────────────────────────────────────── -->
     <div class="section" id="faqs">
       <h2>FAQs</h2>
@@ -438,6 +552,10 @@
       <details>
         <summary><strong>The plugin says it unlocked my layer — is that OK?</strong></summary>
         <p>Yes. If your source layer is locked (like the default "Background" layer), the plugin will automatically unlock it so it can work. You'll see a notification letting you know. This is safe and you can re-lock the layer afterward if needed.</p>
+      </details>
+      <details>
+        <summary><strong>Why is a button disabled?</strong></summary>
+        <p>Some actions require a previous step to be completed first. For example, <strong>Apply Halftone as Mask</strong> requires <strong>Create Halftone</strong>, and export actions require their preview/build step first. Hover the disabled button to see what action is required.</p>
       </details>
       <details>
         <summary><strong>Why is the layer list empty or outdated?</strong></summary>
@@ -469,7 +587,7 @@
       <h3>Vinyl Prep</h3>
       <details>
         <summary><strong>The vinyl preview has too few or too many colors</strong></summary>
-        <p>Adjust the <strong>Max Colors</strong> slider and click <strong>Preview</strong> again. The plugin will re-analyze the image and reduce to the new color count.</p>
+        <p>Adjust the <strong>Max Colors</strong> slider and click <strong>Create Vinyl Shapes</strong> again. The plugin will re-analyze the image and reduce to the new color count.</p>
       </details>
       <details>
         <summary><strong>The vinyl shapes are too small or too detailed for my cutter</strong></summary>
@@ -477,15 +595,29 @@
       </details>
       <details>
         <summary><strong>The Export SVG button gives an error</strong></summary>
-        <p>Make sure you've clicked <strong>Preview</strong> first to generate the shape layers. The export reads data from the shape layers created during preview.</p>
+        <p>Make sure you've clicked <strong>Create Vinyl Shapes</strong> first to generate the shape layers. The export reads data from those shape layers.</p>
       </details>
       <details>
         <summary><strong>Can I edit the shapes before exporting?</strong></summary>
-        <p>Yes. After clicking Preview, the shape layers appear in your Photoshop layers panel. You can use Photoshop's path tools to adjust individual shapes before exporting.</p>
+        <p>Yes. After clicking <strong>Create Vinyl Shapes</strong>, the shape layers appear in your Photoshop layers panel. You can use Photoshop's path tools to adjust individual shapes before exporting.</p>
       </details>
       <details>
         <summary><strong>What software can open the exported SVG?</strong></summary>
         <p>The SVG file works with Adobe Illustrator, Cricut Design Space, Silhouette Studio, Inkscape, and any other application that supports SVG files. Each color is a separate path element with its fill color preserved.</p>
+      </details>
+
+      <h3>Screen Print</h3>
+      <details>
+        <summary><strong>Why is Export Screens disabled?</strong></summary>
+        <p>Click <strong>Create Screens</strong> first. Export reads the generated separation layers and outputs one PNG per screen.</p>
+      </details>
+      <details>
+        <summary><strong>Are screen exports colored?</strong></summary>
+        <p>No. Canvas preview layers are colored for readability, but exported files are black-on-transparent for film output.</p>
+      </details>
+      <details>
+        <summary><strong>Where do output dimensions come from?</strong></summary>
+        <p>Dimensions are controlled by the shared <strong>Export Size</strong> section and apply to both Halftone PNG export and Screen Print exports.</p>
       </details>
     </div>
 
@@ -502,7 +634,7 @@
     <div class="video-modal">
       <button class="video-modal-close" id="closeModalBtn">&times;</button>
       <video id="demoVideo" controls>
-        <source src="./assets/demo.mp4" type="video/mp4" />
+        <source src="./assets/pps_halftone_demo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -528,23 +660,34 @@
       /* ── Video Modal ── */
       var modal = document.getElementById('videoModal');
       var video = document.getElementById('demoVideo');
-      var openBtn = document.getElementById('openDemoBtn');
       var closeBtn = document.getElementById('closeModalBtn');
+      var demoButtons = document.querySelectorAll('[data-demo-video-src]');
+      var sourceNode = video ? video.querySelector('source') : null;
 
-      function openModal(e) {
-        e.preventDefault();
+      function openModal(videoSrc) {
+        if (!modal || !video || !sourceNode || !videoSrc) return;
+        sourceNode.src = videoSrc;
+        video.load();
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
 
       function closeModal() {
+        if (!modal || !video) return;
         modal.classList.remove('active');
         video.pause();
+        video.currentTime = 0;
         document.body.style.overflow = '';
       }
 
-      openBtn.addEventListener('click', openModal);
-      closeBtn.addEventListener('click', closeModal);
+      for (var d = 0; d < demoButtons.length; d++) {
+        demoButtons[d].addEventListener('click', function (e) {
+          e.preventDefault();
+          var src = e.currentTarget.getAttribute('data-demo-video-src');
+          openModal(src);
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
       modal.addEventListener('click', function (e) {
         if (e.target === modal) closeModal();
